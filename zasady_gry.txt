@@ -1,0 +1,7 @@
+- 3 okręty, 2 po 2 kratki 1 3 kratki
+-mogą się stykać
+-pole 10x10
+-pole oparte na przyciskach
+-wiersze cyfry kolumny litery
+-przycisk natępny gracz minimalizuje jedno i maksymalizuje drugie okno
+-plik z zapisanymi wynikami
