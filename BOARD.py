@@ -14,7 +14,14 @@ RADIUS = int(SQUARESIZE/2 - 5)
 width = COLUMN_COUNT * SQUARESIZE
 height = (ROW_COUNT+1) * SQUARESIZE
 size = (width, height)
+pygame.init()
+a = pygame.image.load('ormn.PNG') 
+pygame.display.set_icon(a)
 screen = pygame.display.set_mode(size)
+pygame.display.set_caption('Orange & Mint')
+myfont = pygame.font.SysFont("monospace", 75)
+music = pygame.mixer.music.load('wii.mp3')
+pygame.mixer.music.play(-2)
 
 class BOARD():
     def create_board():

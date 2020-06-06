@@ -11,9 +11,7 @@ turn = 0
 pygame.init()
 BOARD.draw_board(board)
 pygame.display.update()
-myfont = pygame.font.SysFont("monospace", 75)
-music = pygame.mixer.music.load('wii.mp3')
-pygame.mixer.music.play(-2)
+
 
 while not game_over:
 
