@@ -3,18 +3,17 @@ import pygame
 import sys
 import math
 
-BLUE = (0,0,255)
-BLACK = (0,0,0)
-RED = (255,0,0)
-YELLOW = (255,255,0)
+CITRUS = (207,48,12)
+CHOCOLATE = (46,13,0)
+MINT = (140,191,115)
+ORANGE = (250,141,7)
 ROW_COUNT = 6
 COLUMN_COUNT = 7
 SQUARESIZE = 100
-
+RADIUS = int(SQUARESIZE/2 - 5)
 width = COLUMN_COUNT * SQUARESIZE
 height = (ROW_COUNT+1) * SQUARESIZE
 size = (width, height)
-RADIUS = int(SQUARESIZE/2 - 5)
 screen = pygame.display.set_mode(size)
 
 class BOARD():
@@ -60,13 +59,13 @@ class BOARD():
     def draw_board(board):
         for c in range(COLUMN_COUNT):
             for r in range(ROW_COUNT):
-                pygame.draw.rect(screen, BLUE, (c*SQUARESIZE, r*SQUARESIZE+SQUARESIZE, SQUARESIZE, SQUARESIZE))
-                pygame.draw.circle(screen, BLACK, (int(c*SQUARESIZE+SQUARESIZE/2), int(r*SQUARESIZE+SQUARESIZE+SQUARESIZE/2)), RADIUS)
+                pygame.draw.rect(screen, CITRUS, (c*SQUARESIZE, r*SQUARESIZE+SQUARESIZE, SQUARESIZE, SQUARESIZE))
+                pygame.draw.circle(screen, CHOCOLATE, (int(c*SQUARESIZE+SQUARESIZE/2), int(r*SQUARESIZE+SQUARESIZE+SQUARESIZE/2)), RADIUS)
         
         for c in range(COLUMN_COUNT):
             for r in range(ROW_COUNT):		
                 if board[r][c] == 1:
-                    pygame.draw.circle(screen, RED, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
+                    pygame.draw.circle(screen, MINT, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
                 elif board[r][c] == 2: 
-                    pygame.draw.circle(screen, YELLOW, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
+                    pygame.draw.circle(screen, ORANGE, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
         pygame.display.update()
